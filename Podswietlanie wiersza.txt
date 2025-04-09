@@ -1,0 +1,27 @@
+<table class="striped">
+    <tr>
+        <td>pierwszy wiersz</td>
+    </tr>
+    <tr>
+        <td>drugi wiersz</td>
+    </tr>
+    <tr>
+        <td>trzeci wiersz</td>
+    </tr>
+</table>
+<p>Podświetlenie wskazanego wiersza tabeli</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(function($){
+        $("table.striped tr").mouseover(function(){
+            $(this).addClass('highlight');
+        }).mouseout(function(){
+            $(this).removeClass('highlight');
+        })
+    });
+</script>
+<style>
+    .highlight {
+        background: color #fc6;
+    }
+    </style>
